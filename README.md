@@ -1,4 +1,4 @@
-# Validate Library
+# ValidEasy Library
 
 ## Overview
 
