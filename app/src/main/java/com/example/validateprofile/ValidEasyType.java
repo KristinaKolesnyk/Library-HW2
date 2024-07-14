@@ -1,6 +1,6 @@
 package com.example.validateprofile;
 
-public enum ValidateType {
+public enum ValidEasyType {
     EMAIL,
     PHONE,
     NAME,

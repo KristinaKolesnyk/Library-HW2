@@ -10,27 +10,27 @@ import com.google.android.material.button.MaterialButton;
 public class MainActivity extends AppCompatActivity {
     private EditText main_EDT_email, main_EDT_phone, main_EDT_name, main_EDT_age, main_EDT_password, main_EDT_date;
     private MaterialButton main_BTN_checkMail, main_BTN_checkPhone, main_BTN_checkName, main_BTN_checkAge, main_BTN_checkPassword, main_BTN_checkDate;
-    private ValidateViewModel viewModel;
+    private ValidViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        viewModel = new ViewModelProvider(this).get(ValidateViewModel.class);
+        viewModel = new ViewModelProvider(this).get(ValidViewModel.class);
         findViews();
         createListeners();
     }
 
     private void createListeners() {
-        main_BTN_checkMail.setOnClickListener(v -> validate(main_EDT_email.getText().toString(), ValidateType.EMAIL));
-        main_BTN_checkPhone.setOnClickListener(v -> validate(main_EDT_phone.getText().toString(), ValidateType.PHONE));
-        main_BTN_checkName.setOnClickListener(v -> validate(main_EDT_name.getText().toString(), ValidateType.NAME));
-        main_BTN_checkAge.setOnClickListener(v -> validate(main_EDT_age.getText().toString(), ValidateType.AGE));
-        main_BTN_checkPassword.setOnClickListener(v -> validate(main_EDT_password.getText().toString(), ValidateType.PASSWORD));
-        main_BTN_checkDate.setOnClickListener(v -> validate(main_EDT_date.getText().toString(), ValidateType.DATE));
+        main_BTN_checkMail.setOnClickListener(v -> validate(main_EDT_email.getText().toString(), ValidEasyType.EMAIL));
+        main_BTN_checkPhone.setOnClickListener(v -> validate(main_EDT_phone.getText().toString(), ValidEasyType.PHONE));
+        main_BTN_checkName.setOnClickListener(v -> validate(main_EDT_name.getText().toString(), ValidEasyType.NAME));
+        main_BTN_checkAge.setOnClickListener(v -> validate(main_EDT_age.getText().toString(), ValidEasyType.AGE));
+        main_BTN_checkPassword.setOnClickListener(v -> validate(main_EDT_password.getText().toString(), ValidEasyType.PASSWORD));
+        main_BTN_checkDate.setOnClickListener(v -> validate(main_EDT_date.getText().toString(), ValidEasyType.DATE));
     }
 
-    private void validate(String input, ValidateType type) {
+    private void validate(String input, ValidEasyType type) {
         String result = viewModel.validate(input, type);
         showToast(result);
     }
