@@ -50,6 +50,11 @@ dependencies {
   implementation 'com.github.yourusername:ValidEasyLibrary:1.0.0'
 }
 
+## Usage
+Here are examples of how to use the ValidEasy Library in your Android application:
+Checking Phone Number Validity
+**java
+
 ## Getting Started
 
 Integrating the ValidEasy Library into your Android project is a breeze. With just a few lines of code, you can start validating user input and ensuring data accuracy across your application. Say goodbye to common validation headaches and focus on building amazing features for your users.
