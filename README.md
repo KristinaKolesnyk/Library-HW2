@@ -52,8 +52,15 @@ dependencies {
 
 ## Usage
 Here are examples of how to use the ValidEasy Library in your Android application:
-Checking Phone Number Validity
-**java
+
+### Checking Phone Number Validity
+```java
+private static final String PHONE_REGEX = "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$";
+
+public static boolean checkPhoneNumber(String number) {
+        return number.matches(PHONE_REGEX);
+    }
+```
 
 ## Getting Started
 
