@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ValidateProfile</string>
+    <string name="app_name">ValidEasy</string>
     <string name="email">Email</string>
     <string name="check">Check</string>
     <string name="phone_number">Phone number</string>
